@@ -3,16 +3,19 @@ classDiagram
     Animal <|-- Cat
 
     class Animal {
-        +String name
-        +int age
-        +void eat()
-        +void sleep()
+        String nom
+        decimal coutNourriture
+        int frequenceRepas
+        datetime dernierRepas
+
+        void exprimer
+        void manger
     }
 
     class Dog {
-        +void bark()
+        void bark()
     }
 
     class Cat {
-        +void meow()
+        void meow()
     }
