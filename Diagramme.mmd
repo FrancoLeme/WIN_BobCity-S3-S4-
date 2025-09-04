@@ -1,21 +1,46 @@
 classDiagram
     Animal <|-- Dog
     Animal <|-- Cat
+    Personne "1" --> "1..*" Animal : possède
 
-    class Animal {
-        String nom
-        decimal coutNourriture
-        int frequenceRepas
-        datetime dernierRepas
 
-        void exprimer
-        void manger
+    class Animal{
+        +string nom
+        +decimal coutNourriture
+        +int frequenceRepas
+        +datetime dernierRepas
+
+        +exprimer()
+        +manger()
     }
 
-    class Dog {
-        void bark()
+    class Chien{
+        +exprimer()
     }
 
-    class Cat {
-        void meow()
+    class Chat{
+        +exprimer()
+    }
+
+    class Personne{
+        +string nom
+        +Compte compte
+        +Emploi emploi
+
+        +travailler()
+        +nourrir()
+    }
+
+    class Compte{
+        +decimal solde
+
+        +deposer(decimal montant)
+        +retirer(decimal montant)
+    }
+
+    class Emploi{
+        +string titre
+        +decimal salaire
+
+
     }
