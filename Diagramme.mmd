@@ -1,2 +1,18 @@
 classDiagram
-	Animal
+    Animal <|-- Dog
+    Animal <|-- Cat
+
+    class Animal {
+        +String name
+        +int age
+        +void eat()
+        +void sleep()
+    }
+
+    class Dog {
+        +void bark()
+    }
+
+    class Cat {
+        +void meow()
+    }
