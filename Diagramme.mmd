@@ -2,6 +2,7 @@ classDiagram
     Animal <|-- Chien
     Animal <|-- Chat
     Personne "1" --> "1..*" Animal : possède
+    Personne "1" --* "1" Compte
 
 
 
